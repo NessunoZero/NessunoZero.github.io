@@ -90,8 +90,9 @@ ma che ancora non ho deciso se rendere open source</li>
         if (ref in graph){
           let newLink = document.createElement('button');
           newLink.value = ref
+          newLink.name = ref
           newLink.innerHTML = links[i].innerHTML
-          newLink.onclick = (event) => loadnode(event.target.value)
+          newLink.onclick = (event) => loadnode(event.target.name)
           links[i].parentNode.replaceChild(newLink, links[i]);
         }
       }
